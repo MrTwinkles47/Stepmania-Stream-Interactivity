@@ -4,13 +4,14 @@ const fs = require('fs');
 const path = require('path');
 
 const APPDATA = process.env.APPDATA || process.env.HOME;
-const file_path = "Stepmania 5/Save/Interaction.txt";
+//const file_path = "Stepmania 5.1/Save/Interaction.txt";
+const file_path = `${process.env.SAVE_DIR}/Interaction.txt`;
 const full_path = path.join(APPDATA, file_path);
 
 // Table of username to bits that they currently have ready for use.
 // Bits are used to power up mods and give them more time.
 const users_with_bits = {};
-const BITS_TO_SECONDS_CONVERSION = 0.01; // 0.05 = 5 extra seconds per 100 bits, or 1 extra per 20 bits
+const BITS_TO_SECONDS_CONVERSION = 0.1; // 0.05 = 5 extra seconds per 100 bits, or 1 extra per 20 bits
 
 /**
  * Applies a mod to the game from a user.
