@@ -8,6 +8,7 @@ Create a `.env` file inside `Channel Points Monitor`. Inside the `.env`, add the
 ```
 TOKEN=YOUR_OAUTH_TOKEN_HERE
 CHANNEL_ID=YOUR_CHANNEL_ID_HERE
+SAVE_DIR=YOUR_STEPMANIA_SAVE_DIRECTORY
 ```
 You can find your channel ID by using the Twitch API. It's a bit difficult.
 
