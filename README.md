@@ -4,16 +4,19 @@ Enables viewers to interact with your Stepmania game by redeeming channel points
 ## Setting up
 
 ### Node Environment
-Create a `.env` file inside `Channel Points Monitor`. Inside the `.env`, add the following two fields:
+Create a `.env` file inside `Channel Points Monitor`. Inside the `.env`, add the following four fields:
 ```
 TOKEN=YOUR_OAUTH_TOKEN_HERE
 CHANNEL_ID=YOUR_CHANNEL_ID_HERE
+PORTABLE_MODE=FALSE
 SAVE_DIR=YOUR_STEPMANIA_SAVE_DIRECTORY
 ```
 You can find your channel ID by using the Twitch API. It's a bit difficult.
 
 For the OAuth token, you can use a website like [this](https://twitchtokengenerator.com/) to generate tokens. In the future, this
 functionality will be integrated with this app along with automatic channel ID grabbing.
+
+Next, specify if your StepMania installation is running in "Portable Mode" (ex. 5.3-OutFox). If TRUE, also specify the "Save" directory. Otherwise, the user's `APPDATA` folder will be assumed.
 
 Navigate into `Channel Points Monitor` and run `npm i` to install the required node modules.
 
