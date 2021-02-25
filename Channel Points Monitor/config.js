@@ -18,7 +18,10 @@ Mod =
     Roll: 15,
     XMode: 16,
     Tipsy: 17,
-    Flip: 18
+    Flip: 18,
+    Holds: 19,
+    Mines: 20,
+    Turn: 21
 }
 
 // Input validation for InputTypes. Verifies that it matches the correct format.
@@ -62,6 +65,12 @@ InputValidation =
     [Mod.Tipsy]: new RegExp('^[0-9]+% tipsy$'),
     
     [Mod.Flip]: new RegExp('^Flip$'),
+    
+    [Mod.Holds]: new RegExp('^(No Holds)|(Planted)|(Twister)|(Holds To Rolls)$'),
+    
+    [Mod.Mines]: new RegExp('^(Off)|(On)|(Additive)|(Attack Mines)$'),
+    
+    [Mod.Turn]: new RegExp('^(Mirror)|(Left)|(Right)|(Shuffle)$')
     
 }
 
