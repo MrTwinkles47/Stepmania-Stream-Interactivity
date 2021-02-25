@@ -4,9 +4,13 @@ const fs = require('fs');
 const path = require('path');
 
 const APPDATA = process.env.APPDATA || process.env.HOME;
-//const file_path = "Stepmania 5.1/Save/Interaction.txt";
-const file_path = `${process.env.SAVE_DIR}/Interaction.txt`;
-const full_path = path.join(APPDATA, file_path);
+
+if(process.env.PORTABLE_MODE){
+    const full_path = `${process.env.SAVE_DIR}/Interaction.txt`;
+}else{
+    const file_path = "Stepmania 5.1/Save/Interaction.txt";
+    const full_path = path.join(APPDATA, file_path);
+}
 
 // Table of username to bits that they currently have ready for use.
 // Bits are used to power up mods and give them more time.
